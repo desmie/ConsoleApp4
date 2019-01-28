@@ -32,7 +32,8 @@ namespace Assignment1_S19
             int[] arr = new int[] { 1, 2, 3, 2, 2, 1, 3, 2 };
             computeFrequency(arr);
             Console.ReadKey();
-            // write your self-reflection here as a comment
+           
+            // Doing this assignment helped me learn and revise the basic looping constructs, helped me learn to build the logic for the methods 
 
         }
 
