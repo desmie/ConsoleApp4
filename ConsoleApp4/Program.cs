@@ -49,7 +49,7 @@ namespace Assignment1_S19
             return true;
         }
 
-        public static void printPrimeNumbers(int x, int y)
+        public static void printPrimeNumbers(int x, int y) //method to print the prime numbers
         {
             
             try
@@ -70,7 +70,7 @@ namespace Assignment1_S19
             }
         }
 
-        public static double fact(int n)
+        public static double fact(int n) //method to compute the factorial
         {
             double f = 1;
             for (int i = 1; i <= n; i++) //to calculate the factorial
@@ -81,7 +81,7 @@ namespace Assignment1_S19
         }
 
 
-        public static double getSeriesResult(int n)
+        public static double getSeriesResult(int n) //to compute the series
         {
             try
             {
@@ -113,7 +113,7 @@ namespace Assignment1_S19
             return 0;
         }
 
-        public static long decimalToBinary(long n)
+        public static long decimalToBinary(long n) //method to convert decimal to binary
         {
 
             long rem = 0;
@@ -140,7 +140,7 @@ namespace Assignment1_S19
             return 0;
             }
 
-            public static long binaryToDecimal(long n)
+            public static long binaryToDecimal(long n) //method to convert binary to decimal
             {
                 int pow = 1;
                 int val = 0;
@@ -197,45 +197,45 @@ namespace Assignment1_S19
                 }
             }
 
-            public static void computeFrequency(int[] a)
-        {
+            public static void computeFrequency(int[] a) //method to compute the frequency 
+           {
             try
             {
-                int len = a.Length;
+                //int len = a.Length;
                 int i, j, count;
-                int[] freq = new int[len]; 
-                for (i = 0; i < len; i++) 
+                int[] f = new int[a.Length]; 
+                for (i = 0; i < a.Length; i++) 
                 {
-                    freq[i] = -1;
+                    f[i] = -1;
                 }
 
 
-                for (i = 0; i < len; i++)
+                for (i = 0; i < a.Length; i++)
                 {
                     count = 1;
-                    for (j = i + 1; j < len; j++)
+                    for (j = i + 1; j < a.Length; j++)
                     {
                         if (a[i] == a[j]) //incrementing the frequency of a number
                         {
                             count++;
-                            freq[j] = 0;
+                            f[j] = 0;
                         }
                     }
 
-                    if (freq[i] != 0)
+                    if (f[i] != 0)
                     {
-                        freq[i] = count;
+                        f[i] = count;
                     }
 
                 }
 
                 Console.Write("The frequency of the element: \n");
                 Console.Write("Number \t Frequency \n");
-                for (i = 0; i < len; i++)
+                for (i = 0; i < a.Length; i++)
                 {
-                    if (freq[i] != 0)
+                    if (f[i] != 0)
                     {
-                        Console.Write(a[i] + "\t" + freq[i] + "\n");
+                        Console.Write(a[i] + "\t" + f[i] + "\n");
                     }
                 }
                 Console.ReadKey();
