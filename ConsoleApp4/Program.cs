@@ -91,11 +91,13 @@ namespace Assignment1_S19
                 {
                     double result1 = fact(i) / (i + 1); //calling the method factorial to compute
                     even = even + result1;
+                   
                 }
                 for (int i = 2; i <= n; i = i + 2)
                 {
                     double result2 = fact(i) / (i + 1); //calling the method factorial to compute 
                     odd = odd + result2;
+                   
                 }
                 double result = even - odd;
 
@@ -115,7 +117,7 @@ namespace Assignment1_S19
         {
 
             long rem = 0;
-            long num = n; int count = 0;
+            long num = n; 
             String a = "";
             try
             {
@@ -123,9 +125,7 @@ namespace Assignment1_S19
                 {
                     rem = num % 2; 
                     if (rem == 1)
-                    {
-                        count++;
-                    }
+                   
                     a = a + "" + rem; //to append remainder value in each iteration
                     num = num / 2;   //obtain quotient to reiterate
                 }
@@ -151,9 +151,9 @@ namespace Assignment1_S19
                     {
                         if (num1[i] == '1') 
                         {
-                            val += pow;
+                            val =val+pow;
                         }
-                        pow *= 2;
+                        pow = pow*2;
                     }
                     long var = Convert.ToInt64(val); //typecasting
                     return var;
